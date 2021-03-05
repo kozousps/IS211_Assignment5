@@ -1,7 +1,8 @@
 class Request:
-    def __init__(self, time):
+    def __init__(self, time, file):
         self.timestamp = time
-        self.timereq = run_time
+        for row in file:
+            self.timereq = row[0]
 
     def get_stamp(self):
         return self.timestamp
