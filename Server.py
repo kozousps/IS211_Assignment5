@@ -1,7 +1,5 @@
 class Server:
     def __init__(self, file):
-        for row in file:
-            self.process_rate = row[2]
         self.current_task = None
         self.time_remaining = 0
 
@@ -19,4 +17,4 @@ class Server:
 
     def start_next(self, new_task):
         self.current_task = new_task
-        self.time_remaining = new_task.get_time()
+        self.time_remaining = new_task.file[2]
